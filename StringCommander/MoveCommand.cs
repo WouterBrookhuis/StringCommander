@@ -22,7 +22,7 @@ namespace StringCommander
             }
 
             Direction dir;
-            if(Enum.TryParse(args[0], out dir))
+            if(Enum.TryParse(args[0].ToUpperInvariant(), out dir))
             {
                 if(!Program.TryMove(dir))
                 {
